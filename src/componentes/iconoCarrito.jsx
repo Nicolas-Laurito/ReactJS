@@ -4,13 +4,14 @@ import './iconoCarrito.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCartShopping} from '@fortawesome/free-solid-svg-icons'
 import {} from '@fortawesome/free-regular-svg-icons'
+import { icon } from '@fortawesome/fontawesome-svg-core';
 
 
 const iconoCarrito = () => {
     return (
         <div className="estiloIcono">
-        <FontAwesomeIcon icon=  {faCartShopping} />
-
+        <a href=""><FontAwesomeIcon icon=  {faCartShopping} /></a>
+        
         </div>
     );
 }
