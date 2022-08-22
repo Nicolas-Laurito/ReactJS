@@ -1,13 +1,13 @@
 import React from 'react';
-import './header.css'
-import BarraMenu from './navBar' 
-import Form from './formulario'
-import Carrito from './iconoCarrito'
+import './Header.css'
+import NavBar from './NavBar' 
+import Formulario from './Formulario'
+import Carrito from './Carrito'
 
 
 
 
-const header = () => {
+const Header = () => {
     return (
 <div className="container-fluid estiloHeader">
 <div className="row">
@@ -19,12 +19,12 @@ const header = () => {
     <div className="row">
             <div className='displayMenu col-md-8'>
                 
-            <BarraMenu/>
+            <NavBar/>
             
             </div>
             
             <div className='displayCarrito col-md-4'>
-            <Form contBuscar="Productos"/>
+            <Formulario contBuscar="Productos"/>
             <Carrito/>
             </div>
             </div>
@@ -34,4 +34,4 @@ const header = () => {
     );
 }
 
-export default header;
+export default Header;

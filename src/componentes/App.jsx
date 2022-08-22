@@ -1,10 +1,12 @@
 import React from 'react';
-import Encabezado from './header' 
+import Header from './Header' 
+import ItemListContainer from './ItemListContainer';
 
 const App = () => {
     return (
         <>
-        <Encabezado />
+        <ItemListContainer greetings={"Bienvenidos"}/>
+        <Header />
         </>
     );
 }

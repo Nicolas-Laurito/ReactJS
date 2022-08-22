@@ -1,6 +1,6 @@
 import React from 'react';
 
-const formulario = ({contBuscar}) => {
+const Formulario = ({contBuscar}) => {
     return (
         <>
             <form className="d-flex" role="search">
@@ -11,4 +11,4 @@ const formulario = ({contBuscar}) => {
     );
 }
 
-export default formulario;
+export default Formulario;

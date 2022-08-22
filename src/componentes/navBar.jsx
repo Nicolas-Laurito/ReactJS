@@ -1,8 +1,8 @@
 import React from 'react';
-import './navBar.css';
+import './NavBar.css';
 
 
-function navBar() {        /*recibo el parametro desde el index*/
+function NavBar() {        /*recibo el parametro desde el index*/
   return(
    
         <div className="menu">
@@ -37,7 +37,7 @@ function navBar() {        /*recibo el parametro desde el index*/
     );
 }
 
-export default navBar;
+export default NavBar;
 
 
 
