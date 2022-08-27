@@ -12,7 +12,7 @@
   
   .estiloHeader{
     width: 100%;
-    height: 250px;
+    min-height: 250px;
     background: linear-gradient(#219900, #7ca172);
     
   }
@@ -36,7 +36,7 @@
 
 
 .displayCarrito{
-
+    
     display: flex;
     flex-direction: row;
     justify-content:space-around;
