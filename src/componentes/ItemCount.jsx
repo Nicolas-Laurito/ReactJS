@@ -1,14 +1,15 @@
 import {React, useState} from 'react';
 
 
+function onAdd(cont){
+    console.log(`Se han seleccionado ${cont} productos`)
+    
+}
 
 
-
-const ItemCount = ({stock, onAdd}) => {            //traigo la propiedad que pase desde itemListcont y la funcion
+const ItemCount = ({stock}) => {            //traigo la propiedad que pase desde itemListcont y la funcion
     const [cont, setCont] = useState(1); 
-    function onAdd(cont){
-        console.log(`Se han seleccionado ${cont} productos`)
-    }
+
 
     function sumar (){
         if (cont < stock){
@@ -32,11 +33,11 @@ const ItemCount = ({stock, onAdd}) => {            //traigo la propiedad que pas
                 <p>Cantidad: {cont} </p>
      
                 <div>
-                    <button className="btn btn-success" onClick={sumar}>+</button>
-                    <button className="btn btn-success" onClick={reset}>Reset</button>
                     <button className="btn btn-success" onClick={restar}>-</button>
+                    <button className="btn btn-success" onClick={reset}>Reset</button>
+                    <button className="btn btn-success" onClick={sumar}>+</button>
                 </div>
-                <button className="btn btn-success" onClick={()=>onAdd(cont)}>Agregar</button>  {/*con el onclick llamo a la funcion onAdd y le paso el valor de cont*/}
+                <button className="btn btn-success" onClick={()=>onAdd(cont)} >Agregar</button>  {/*con el onclick llamo a la funcion onAdd y le paso el valor de cont*/}
             </div>
             
         </div>
