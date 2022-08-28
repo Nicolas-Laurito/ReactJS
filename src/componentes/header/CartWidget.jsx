@@ -1,5 +1,5 @@
 import {React, useState} from 'react';
-import './Carrito.css';
+import './CartWidget.css';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCartShopping} from '@fortawesome/free-solid-svg-icons'
@@ -7,7 +7,7 @@ import {faCartShopping} from '@fortawesome/free-solid-svg-icons'
 
 
 
-const Carrito = () => {
+const CartWidget = () => {
     
    
     
@@ -21,4 +21,4 @@ const Carrito = () => {
     );
 }
 
-export default Carrito;
+export default CartWidget;

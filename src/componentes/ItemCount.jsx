@@ -1,12 +1,15 @@
 import {React, useState} from 'react';
-import Carrito from './Carrito';
+
 
 
 
 
 const ItemCount = ({stock, onAdd}) => {            //traigo la propiedad que pase desde itemListcont y la funcion
     const [cont, setCont] = useState(1); 
-    
+    function onAdd(cont){
+        console.log(`Se han seleccionado ${cont} productos`)
+    }
+
     function sumar (){
         if (cont < stock){
         setCont(cont + 1)
@@ -24,7 +27,7 @@ const ItemCount = ({stock, onAdd}) => {            //traigo la propiedad que pas
 
         <div>
             <div>
-                <h1>Contador</h1>
+          
                 <p>Stock: {stock} </p>
                 <p>Cantidad: {cont} </p>
      

@@ -6,8 +6,8 @@
   
   @font-face {
     font-family: "bulsara";
-  
-    src: url(../fuentes/bulsara.ttf);
+    src: url(../header/fuentes/bulsara.ttf)
+    
   }
   
   .estiloHeader{
