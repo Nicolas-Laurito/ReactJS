@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './componentes/header/Header';
 import ItemListContainer from './componentes/ItemListContainer';
+import Item from './componentes/Item';
 
 
 
@@ -11,7 +12,7 @@ const App = () => {
         <>
         <Header/>                      {/*traigo todo lo que forma el header */}
         
-        <ItemListContainer/>           {/* traigo el componente que a su vez trae el compronente itemcount*/}
+        <Item/> 
         </>
     );
 }
