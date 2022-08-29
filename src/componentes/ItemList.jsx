@@ -1,12 +1,12 @@
 import React from 'react';
 import ItemCount from './ItemCount';
+import Item from './Item';
 
 
 const ItemList = ({productos}) => {
 
-    return (
-        
-        {productos}.map((producto)=>
+            
+       {productos.map}((producto)=>
         <div className="card"  key={producto.id} style={{width: '15rem'}}>
             <img src={producto.img} className="card-img-top"  />
             <div className="card-body">
@@ -19,6 +19,8 @@ const ItemList = ({productos}) => {
         </div>
 
     )
+    return (
+        <Item producto={productos.map}/>
     );
 }
 export default ItemList;
