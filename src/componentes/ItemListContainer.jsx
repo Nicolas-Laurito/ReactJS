@@ -3,7 +3,7 @@ import ItemList from './ItemList';
 
 
 const productos= [
-    {id:1 , nombre:"Top Candy", descripcion:"Fertilizante de floracion. Potencia el aroma de las flores incrementa la resina.Aumento de volumen floral", precio:500, img:"../componentes/Fertilizantes/f1.jpeg", categoria:"Fertilizante", stock:20},
+    {id:1 , nombre:"Top Candy", descipcion:"Fertilizante de floracion. Potencia el aroma de las flores incrementa la resina.Aumento de volumen floral", precio:500, img:"../img/f1.jpeg", categoria:"Fertilizante", stock:20},
     {id:2 , nombre: "Top Bloom", descripcion:"Fertilizando de Floracion. Favorece el desarrollo de racimos florales", precio:600, img:"" , categoria:"Fertilizante" , stock:15},
     {id:3 , nombre:"Fertilizante para raices", descripcion:"Raices Fuertes y sanas. Reduce el estres en trasplantes", precio:650, img:"" , categoria:"Fertilizante", stock:18} ,      
     {id:4 , nombre:"Plaguicida 4 en 1", descripcion:"Contiene Aceite de Neem, Jobon Potasico, tierra de diatomeas y canela.", precio:200, img:"" , categoria:"Sustratos", stock:25},
@@ -34,6 +34,7 @@ const ItemListContainer = () => {
     getProductos()
     .then(productos=>{
         setProd(productos) 
+        
     })
     .catch(error=>{
     console.error(error)    
@@ -47,6 +48,7 @@ const ItemListContainer = () => {
         
         <div className='row'>
             <ItemList productos= {prod}/>
+            
         </div>
 
         
