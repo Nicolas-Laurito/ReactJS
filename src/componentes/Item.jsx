@@ -6,12 +6,12 @@ import ItemCount from './ItemCount';
 
 
 
-const Item = ({ky, nombre, descripcion, precio, stock, img}) => {
+const Item = ({ nombre, descripcion, precio, stock, img}) => {
     
     
     return (
         <>
-            <div className="card"  key={ky} style={{width: '15rem'}}>
+            <div className="card"  style={{width: '15rem'}}>
             <img src={img} className="estiloCard card-img-top"  alt='Imagen' />
             <div className="card-body">
             <h5 className="card-title">{nombre}</h5>
