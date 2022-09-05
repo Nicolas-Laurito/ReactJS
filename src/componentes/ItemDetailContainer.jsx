@@ -3,7 +3,7 @@ import ItemDetail from './ItemDetail';
 
 
 const ItemDetailContainer = () => {
-    const prodBuscar=1
+    const prodBuscar=3
  const [desc , setDesc] = useState ({})
  
  useEffect(() => {

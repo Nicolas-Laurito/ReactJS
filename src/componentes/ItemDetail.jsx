@@ -4,6 +4,9 @@ import ItemCount from './ItemCount';
 
 const ItemDetail = ({prodSelec, id}) => {
 
+
+
+
     
     const [selec, setSelec] = useState ({})
     console.log(prodSelec)
