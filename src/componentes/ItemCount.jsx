@@ -37,7 +37,7 @@ const ItemCount = ({stock}) => {            //traigo la propiedad que pase desde
                     <button className="btn btn-success" onClick={reset}>Reset</button>
                     <button className="btn btn-success" onClick={sumar}>+</button>
                 </div>
-                <button className="btn btn-success" onClick={()=>onAdd(cont)} >Agregar</button>  {/*con el onclick llamo a la funcion onAdd y le paso el valor de cont*/}
+                <button className="btn btn-success" onClick={()=>onAdd(cont)} >Agregar al Carrito</button>  {/*con el onclick llamo a la funcion onAdd y le paso el valor de cont*/}
             </div>
             
         </div>

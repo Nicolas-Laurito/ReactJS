@@ -2,34 +2,20 @@ import {React, useState, useEffect} from 'react';
 import ItemCount from './ItemCount';
 
 
-const ItemDetail = ({prodSelec, id}) => {
 
-
-
-
-    
-    const [selec, setSelec] = useState ({})
-    console.log(prodSelec)
-    console.log(id)
-
-    useEffect(() => {
-    
-    setSelec(prodSelec.find(produ => produ.id===id))
-    console.log(selec)
-
-   }, []);
-
+const ItemDetail = ({unProducto}) => {
+  
 
     return (
         <div>
-            <div className="card"  style={{width: '15rem'}}>
-            <img src={selec.img} className="estiloCard card-img-top"  alt='Imagen' />
+            <div className="card" key={unProducto.key}  style={{width: '15rem'}}>
+            <img src={unProducto.img} className="estiloCard card-img-top"  alt='Imagen' />
             <div className="card-body">
-            <h5 className="card-title">{selec.nombre}</h5>
-            <p className="card-text">Descripcion: {selec.descripcion}</p>
-            <p className="card-text">Precio: ${selec.precio}</p>
+            <h5 className="card-title">{unProducto.nombre}</h5>
+            <p className="card-text">Descripcion: {unProducto.descripcion}</p>
+            <p className="card-text">Precio: ${unProducto.precio}</p>
             </div>
-            <ItemCount stock={selec.stock}/>
+            <ItemCount stock={unProducto.stock}/>
             </div>
         </div>
     );

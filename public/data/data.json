@@ -56,7 +56,7 @@
         "stock":40
     },
     {
-        "id":6 , 
+        "id":7 , 
         "nombre":"Kit Completo Pot", 
         "descripcion":"Flores Compactas+Fomenta el crecimiento+FErtilizante Biomineral+Produccion de Flores", 
         "precio":200, 
@@ -65,7 +65,7 @@
         "stock":12
     },
     {
-        "id":6 , 
+        "id":8 , 
         "nombre":"Nutri Pack Namaste", 
         "descripcion":"Raices Sanas y fuertes+Mejora Resinas, aromas y gustos+Tallos y ramas fuertes+Potenciador de Florestacion+Prevencion de plagas y hongos", 
         "precio":200, 
@@ -74,7 +74,7 @@
         "stock":18
     },
     {
-        "id":6 , 
+        "id":9 , 
         "nombre":"Macetas Mad Rocket", 
         "descripcion":"Guiadores de raices y ventanas para la autopoda radicular", 
         "precio":250, 

@@ -1,33 +1,35 @@
 import {React, useState, useEffect} from 'react';
 import ItemDetail from './ItemDetail';
+import {useParams} from 'react-router-dom'
+
+const ItemDetailContainer = ({producto}) => {
+        
+console.log(producto)
 
 
-const ItemDetailContainer = () => {
-    const prodBuscar=3
- const [desc , setDesc] = useState ({})
- 
- useEffect(() => {
-    
-    fetch ('./data/data.json')
-    .then(response => response.json())
-    .then(data => {
-        Object.values(data).map((productos)=>
-        setDesc(productos)
-        
-              
-        )
-        
+const [desc , setDesc] = useState ({})
+
+
+
+const {id}=useParams()
+
+useEffect(() => {
   
-    })
-console.log(desc)
 
+    const id= 3
 
- }, []);
+    if(producto.id===id){
+        setDesc(producto)
+    }
+
+    // setDesc(producto.find((produc => produc.id === Number(id))))
+
+}, [])
    
-    return (
-        <>
-        <ItemDetail prodSelec={desc} id={prodBuscar} />
-        </>
+return (
+    <>
+     <ItemDetail unProducto={desc} id={id}/>
+    </>
     );
 }
 
