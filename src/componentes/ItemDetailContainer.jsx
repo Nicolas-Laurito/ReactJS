@@ -11,7 +11,7 @@ const [desc , setDesc] = useState ({})
 
 
 
-const {id}=useParams()
+// const {id}=useParams()
 
 useEffect(() => {
   
@@ -28,7 +28,7 @@ useEffect(() => {
    
 return (
     <>
-     <ItemDetail unProducto={desc} id={id}/>
+     <ItemDetail unProducto={desc} />
     </>
     );
 }
