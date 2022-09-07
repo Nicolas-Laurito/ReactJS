@@ -2,27 +2,27 @@ import {React, useState, useEffect} from 'react';
 import ItemDetail from './ItemDetail';
 import {useParams} from 'react-router-dom'
 
-const ItemDetailContainer = ({producto}) => {
+const ItemDetailContainer = () => {
         
-console.log(producto)
+
 
 
 const [desc , setDesc] = useState ({})
-
-
-
-// const {id}=useParams()
-
+const id = 5
 useEffect(() => {
   
-
-    const id= 3
-
-    if(producto.id===id){
-        setDesc(producto)
-    }
-
-    // setDesc(producto.find((produc => produc.id === Number(id))))
+    fetch('./data/data.json')
+    .then((res) => res.json())
+    
+    .then((data) => {
+        data = data.productos
+        setDesc(data.find(unProd => unProd.id===id))
+        
+    })
+    
+    
+    .catch((error) => console.error(error))
+    
 
 }, [])
    
