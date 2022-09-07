@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavBar.css';
-
+import { Link } from 'react-router-dom';
 
 function NavBar() {        /*recibo el parametro desde el index*/
   return(
@@ -8,27 +8,37 @@ function NavBar() {        /*recibo el parametro desde el index*/
         <div className="menu">
           <nav className="navegacion navbar-expand-sm navbar-light">
             <ul className="menu navbar-nav ">
+                <Link className="nav-link" to='/'>
                 <li className="nav-item">
-                  <a className="nav-link" href="#hd">Inicio</a>
+                  Inicio
                 </li>
+                </Link>
+                <Link to='/' className="nav-link">
                 <li className="nav-item">
-                  <a className="nav-link" href="#quien">Quienes Somos?</a>
+                  Quienes Somos?
                 </li>
+                </Link>
+                <Link to='/' className="nav-link">
                 <li className="nav-item">
-                  <a className="nav-link" href="#prod">Productos</a>
+                 Productos
                   <ul className="subMenu">
-                    <li><a  href="#">Fertilizantes</a></li>
-                    <li><a  href="#">Sustratos y complementos</a></li>
-                    <li><a  href="#">Parafernalia</a></li>
-                    <li><a  href="#">Otros</a></li>
+                  <Link to='/categoria/Fertilizante' className="nav-link"><li>Fertilizantes</li></Link>
+                  <Link to='/categoria/Sustrato' className="nav-link"><li>Sustratos y complementos</li></Link>
+                  {/* <Link to='/categoria/Fertilizante' className="nav-link"><li>Parafernalia</li></Link> */}
+                  <Link to='/categoria/Otros' className="nav-link"><li>Otros</li></Link>
                   </ul>
                 </li>
+                </Link>
+                <Link to='/' className="nav-link">
                 <li className="nav-item">
-                  <a className="nav-link" href="#grow">Grow Tips</a>
+                  Grow Tips
                 </li>
+                </Link>
+                <Link to='/' className="nav-link">
                 <li className="nav-item">
-                  <a className="nav-link" href="">Contacto</a>
+                  Contacto
                 </li>
+                </Link>
               </ul>
          </nav>
         </div>       

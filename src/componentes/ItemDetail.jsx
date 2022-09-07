@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from 'react';
+import React from 'react';
 import ItemCount from './ItemCount';
 
 
@@ -7,8 +7,8 @@ const ItemDetail = ({unProducto}) => {
   
 
     return (
-        <div>
-            <div className="card" key={unProducto.key}  style={{width: '15rem'}}>
+        <div  key={unProducto.id}>
+            <div className="card" style={{width: '15rem'}}>
             <img src={unProducto.img} className="estiloCard card-img-top"  alt='Imagen' />
             <div className="card-body">
             <h5 className="card-title">{unProducto.nombre}</h5>

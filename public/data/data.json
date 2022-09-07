@@ -5,7 +5,7 @@
         "nombre":"Top Candy", 
         "descripcion":"Fertilizante de floracion. Potencia el aroma de las flores incrementa la resina.Aumento de volumen floral", 
         "precio":500, 
-        "img":"./img/f1.jpeg", 
+        "img":"../img/f1.jpeg", 
         "categoria":"Fertilizante",
         "stock":30
     },
@@ -15,7 +15,7 @@
         "nombre": "Top Bloom", 
         "descripcion":"Fertilizando de Floracion. Favorece el desarrollo de racimos florales", 
         "precio":600, 
-        "img":"./img/f2.jpeg" ,
+        "img":"../img/f2.jpeg" ,
         "categoria":"Fertilizante",
         "stock":20
     },
@@ -24,7 +24,7 @@
         "nombre":"Fertilizante para raices", 
         "descripcion":"Raices Fuertes y sanas. Reduce el estres en trasplantes",
         "precio":650, 
-        "img":"./img/f3.jpeg" , 
+        "img":"../img/f3.jpeg" , 
         "categoria":"Fertilizante",
         "stock":25
     } ,      
@@ -33,8 +33,8 @@
         "nombre":"Plaguicida 4 en 1", 
         "descripcion":"Contiene Aceite de Neem, Jobon Potasico, tierra de diatomeas y canela.", 
         "precio":200, 
-        "img":"./img/sc1.jpeg" , 
-        "categoria":"Sustratos",
+        "img":"../img/sc1.jpeg" , 
+        "categoria":"Sustrato",
         "stock":18
     },
     {
@@ -42,7 +42,7 @@
         "nombre":"Aceite uro de Neem", 
         "descripcion":"Combate, previene y controla plagas", 
         "precio":150, 
-        "img":"./img/sc2.jpeg" , 
+        "img":"../img/sc2.jpeg" , 
         "categoria":"Sustrato",
         "stock":10
     },
@@ -51,7 +51,7 @@
         "nombre":"Gel enraizante para produccion de esquejes", 
         "descripcion":"Promueve el crecimiento", 
         "precio":150, 
-        "img":"./img/sc3.jpeg" , 
+        "img":"../img/sc3.jpeg" , 
         "categoria":"Sustrato",
         "stock":40
     },
@@ -60,7 +60,7 @@
         "nombre":"Kit Completo Pot", 
         "descripcion":"Flores Compactas+Fomenta el crecimiento+FErtilizante Biomineral+Produccion de Flores", 
         "precio":200, 
-        "img":"./img/o1.jpeg" , 
+        "img":"../img/o1.jpeg" , 
         "categoria":"Otros",
         "stock":12
     },
@@ -69,7 +69,7 @@
         "nombre":"Nutri Pack Namaste", 
         "descripcion":"Raices Sanas y fuertes+Mejora Resinas, aromas y gustos+Tallos y ramas fuertes+Potenciador de Florestacion+Prevencion de plagas y hongos", 
         "precio":200, 
-        "img":"./img/o2.jpeg" , 
+        "img":"../img/o2.jpeg" , 
         "categoria":"Otros",
         "stock":18
     },
@@ -78,7 +78,7 @@
         "nombre":"Macetas Mad Rocket", 
         "descripcion":"Guiadores de raices y ventanas para la autopoda radicular", 
         "precio":250, 
-        "img":"./img/o5.jpeg" , 
+        "img":"../img/o5.jpeg" , 
         "categoria":"Otros",
         "stock":5
     }

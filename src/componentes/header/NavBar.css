@@ -12,7 +12,7 @@
 
 .navegacion {
   font-size: 20px;
- 
+  position: relative;
 
   font-weight: 120;
   font-family: bulsara;
@@ -26,15 +26,15 @@
   list-style: none;
 }
 
-.menu li a{
+.nav-link{
   display: block;
   margin: 10px;
   padding: 10px;
-  color: rgba(0, 0, 0, 0.493);
-
+  color: rgba(0, 0, 0, 0.829);
+  text-decoration: none;
 }
 
-.menu >li> a:hover{
+.menu >li> .nav-link:hover{
   color:black;
   font-weight: 10;
   transition: all 2s;
@@ -46,21 +46,13 @@
   
 }
 
-.subMenu li a{
-  display: block;
-  padding: 10px;
-  text-decoration: none;
 
-}
-.subMenu li a:hover{
-  color: black;
-  transition: all 2s;
-}
+
 
 .menu li:hover .subMenu{
-  display: block;
-  
-  
+  color: black;
+  display: flex;
+  flex-direction: row;
 }
 
 
