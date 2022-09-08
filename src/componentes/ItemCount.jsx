@@ -1,14 +1,11 @@
 import {React, useState} from 'react';
 
 
-function onAdd(cont){
-    console.log(`Se han seleccionado ${cont} productos`)
-    
-}
 
 
-const ItemCount = ({stock}) => {            //traigo la propiedad que pase desde itemListcont y la funcion
-    const [cont, setCont] = useState(1); 
+
+const ItemCount = ({stock, onAdd, initial}) => {            //traigo la propiedad que pase desde itemListcont y la funcion
+    const [cont, setCont] = useState(initial); 
 
 
     function sumar (){
