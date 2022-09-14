@@ -1,18 +1,22 @@
-import {React,useState} from 'react';
+import {React,useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
+import { CartContext } from './Context/CartContext';
+
 
 
 
 const ItemDetail = ({unProducto}) => {
-  
+    const {addCart} = useContext(CartContext);
+
     const [carrito ,setCarrito ] = useState (false)
     
-    function onAdd () {
+    function onAdd (cont) {
         
         setCarrito(true)
-        
-        // console.log(`Se han seleccionado ${cont} productos`)
+        addCart(unProducto, cont)
+        let nuevoStock=unProducto.stock - cont
+        unProducto.stock=nuevoStock
              
     }       
 
@@ -27,10 +31,12 @@ const ItemDetail = ({unProducto}) => {
             </div>
             <div>
                 {carrito ? <Link className="btn btn-success" to='/cart'>Finalizar Compra</Link> :
-            <ItemCount stock={unProducto.stock} initial={1} onAdd={onAdd}/>
+            <ItemCount stock={unProducto.stock} initial={1} onAdd={onAdd} />
+            
         }</div>
 
             </div>
+            
         </div>
     );
 }

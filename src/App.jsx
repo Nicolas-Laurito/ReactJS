@@ -5,6 +5,7 @@ import ItemListContainer from './componentes/ItemListContainer';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
 import Cart from './componentes/Cart';
 import { faHourglass1 } from '@fortawesome/free-solid-svg-icons';
+import {CartProvider} from './componentes/Context/CartContext';
 
 
 
@@ -13,10 +14,7 @@ import { faHourglass1 } from '@fortawesome/free-solid-svg-icons';
 const App = () => {
     return (
         <>
-        {/* <Header/>
-        <ItemListContainer/>
-        <ItemDetailContainer/> */}
-
+         <CartProvider>
         <BrowserRouter>
         
                 <Header/>                  
@@ -28,7 +26,9 @@ const App = () => {
                 
                 
             </Routes>
+            
         </BrowserRouter>
+        </CartProvider>
         </>
     );
 }

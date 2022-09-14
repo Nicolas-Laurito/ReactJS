@@ -18,8 +18,6 @@ useEffect(() => {
         
         setDesc(productos.find(produ => produ.id === Number(id))))
         
-        // data = data.productos
-        // setDesc(data.find((unProd) => unProd.id===Number(id)))
         
     })
     

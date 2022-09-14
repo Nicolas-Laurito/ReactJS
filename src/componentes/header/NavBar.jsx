@@ -18,7 +18,7 @@ function NavBar() {        /*recibo el parametro desde el index*/
                   Quienes Somos?
                 </li>
                 </Link>
-                <Link to='/' className="nav-link">
+                
                 <li className="nav-item">
                  Productos
                   <ul className="subMenu">
@@ -28,7 +28,7 @@ function NavBar() {        /*recibo el parametro desde el index*/
                   <Link to='/categoria/Otros' className="nav-link"><li>Otros</li></Link>
                   </ul>
                 </li>
-                </Link>
+                
                 <Link to='/' className="nav-link">
                 <li className="nav-item">
                   Grow Tips
