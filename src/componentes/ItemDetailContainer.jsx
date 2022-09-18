@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom'
 import ItemDetail from './ItemDetail';
 
 
+
 const ItemDetailContainer = () => {
         
 const {id} = useParams()
@@ -10,6 +11,8 @@ const [desc , setDesc] = useState ({})
 
 useEffect(() => {
   
+
+
     fetch('../data/data.json')
     .then((res) => res.json())
     

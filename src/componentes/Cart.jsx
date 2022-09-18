@@ -7,7 +7,7 @@ import Item from './Item';
 
 const Cart = () => {
     
-    const {cart, removeItem, clear} = useContext(CartContext);
+    const {cart, removeItem, clear, getTotal} = useContext(CartContext);
 
     
 
@@ -56,11 +56,12 @@ const Cart = () => {
      
           ))}
 
-<button className="btn btn-success" onClick={()=>clear()}>Vaciar Carrito</button>
-            {/* <tr>
+
+            <tr>
             
-            <th>Precio Final</th>
-            </tr> */}
+            <th>Total Abonar ${getTotal()}</th>
+            <th><button className="btn btn-success" onClick={()=>clear()}>Vaciar Carrito</button></th>
+            </tr>
      </table>
    
         </>

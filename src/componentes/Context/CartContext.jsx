@@ -36,21 +36,16 @@ const isInCart = (id) => cart.find(product => product.id === id) ? true : false;
 
 const removeItem = (productoX) => setCart(cart.filter(producto => producto.id !== productoX));
 
+const getTotal =()=>{
+let total = 0
+  cart.map((prodCart) => {total += (prodCart.cantidad*prodCart.precio)})
+    return total
+}
 
 
-
-
-
-
-
-
-
-
-
-
-    return (
+return (
         <>
-            <CartContext.Provider value={{cart, addCart, isInCart, removeItem, clear}}>         {/*devuelvo el contexto que cree*/}   
+            <CartContext.Provider value={{cart, addCart, isInCart, removeItem, clear, getTotal}}>         {/*devuelvo el contexto que cree*/}   
 
                 {props.children}
             </CartContext.Provider>
