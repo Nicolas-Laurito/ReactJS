@@ -1,6 +1,6 @@
 import {React, useState} from 'react';
 import './CartWidget.css';
-
+import { Link } from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCartShopping} from '@fortawesome/free-solid-svg-icons'
 
@@ -15,7 +15,9 @@ const CartWidget = () => {
         
         <div className="estiloIcono">
             
-        <a href=""><FontAwesomeIcon icon=  {faCartShopping} /></a>
+        
+        <Link to='/Cart'><FontAwesomeIcon icon=  {faCartShopping} /></Link>    
+        
         
         </div>
     );

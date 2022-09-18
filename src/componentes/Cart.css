@@ -1,0 +1,14 @@
+.estiloImgCarrito{
+    width: 100px;
+    height: 100px;
+}
+
+.acomodarCarrito{
+    display: flex;
+    flex-direction: row;
+}
+
+.estiloDos{
+    display: flex;
+    flex-direction: column;
+}

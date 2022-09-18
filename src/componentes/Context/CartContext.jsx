@@ -9,31 +9,48 @@ const CartContext =createContext();
 
 const CartProvider =(props)=>{
 
-    const [carrito, setCarrito] = useState();
+    const [cart, setCart] = useState([]);
 
     const addCart = (unProducto, cont) => {
-  
-        console.log(cont)
+       
+        if (isInCart(unProducto.id)){
 
-        //hacer funcion donde compare si el producto que viene ya esta en el carrito, solo agregar la cantidad, sino agregar todo
+        setCart(cart.map(producto=>{
+            return producto.id===unProducto.id ? {...producto, cantidad: producto.cantidad + cont}:producto
+        }))
+
+
+    }else{
+        setCart([...cart, {...unProducto, cantidad: cont}])
+        console.log(cart)
         
-        //     const nuevoProd = unProducto.find(prodAgregado => prodAgregado.id === unProducto.id)
     
-
-    // if (nuevoProd){
-
-    //     setCarrito([...nuevoProd, {cantidad: + cont}])
-
-    // }else{
-    //     setCarrito([...nuevoProd, {cantidad: cont}])
-    // }
-
+    }
 
 }
 
+
+const clear = () => setCart([]);
+
+const isInCart = (id) => cart.find(product => product.id === id) ? true : false;
+
+const removeItem = (productoX) => setCart(cart.filter(producto => producto.id !== productoX));
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <>
-            <CartContext.Provider value={{carrito, addCart}}>         {/*devuelvo el contexto que cree*/}   
+            <CartContext.Provider value={{cart, addCart, isInCart, removeItem, clear}}>         {/*devuelvo el contexto que cree*/}   
 
                 {props.children}
             </CartContext.Provider>

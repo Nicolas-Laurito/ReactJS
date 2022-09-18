@@ -11,13 +11,14 @@ const ItemDetail = ({unProducto}) => {
 
     const [carrito ,setCarrito ] = useState (false)
     
+
     function onAdd (cont) {
-        
-        setCarrito(true)
-        addCart(unProducto, cont)
         let nuevoStock=unProducto.stock - cont
         unProducto.stock=nuevoStock
-             
+        setCarrito(true)
+        addCart(unProducto, cont)
+      
+           
     }       
 
     return (
@@ -30,7 +31,7 @@ const ItemDetail = ({unProducto}) => {
             <p className="card-text">Precio: ${unProducto.precio}</p>
             </div>
             <div>
-                {carrito ? <Link className="btn btn-success" to='/cart'>Finalizar Compra</Link> :
+                {carrito ? <Link className="btn btn-success" to='/'>Seguir Comprando</Link> :
             <ItemCount stock={unProducto.stock} initial={1} onAdd={onAdd} />
             
         }</div>
