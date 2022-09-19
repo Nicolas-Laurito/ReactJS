@@ -42,10 +42,16 @@ let total = 0
     return total
 }
 
+const cantTotal = () =>{
+    let totalProd =0
+    cart.map((prod)=>{totalProd += prod.cantidad})
+    return totalProd
+}
+
 
 return (
         <>
-            <CartContext.Provider value={{cart, addCart, isInCart, removeItem, clear, getTotal}}>         {/*devuelvo el contexto que cree*/}   
+            <CartContext.Provider value={{cart, addCart, isInCart, removeItem, clear, getTotal, cantTotal}}>         {/*devuelvo el contexto que cree*/}   
 
                 {props.children}
             </CartContext.Provider>
