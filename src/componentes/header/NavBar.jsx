@@ -34,7 +34,7 @@ function NavBar() {        /*recibo el parametro desde el index*/
                   Grow Tips
                 </li>
                 </Link>
-                <Link to='/' className="nav-link">
+                <Link to='/form' className="nav-link">
                 <li className="nav-item">
                   Contacto
                 </li>

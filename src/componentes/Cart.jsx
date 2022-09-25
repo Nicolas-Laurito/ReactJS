@@ -61,6 +61,7 @@ const Cart = () => {
             
             <th>Total Abonar ${getTotal()}</th>
             <th><button className="btn btn-success" onClick={()=>clear()}>Vaciar Carrito</button></th>
+            <th><Link to='/FinalizarCompra'> <button className="btn btn-success" >Finalizar Compra</button></Link></th>
             </tr>
      </table>
    
