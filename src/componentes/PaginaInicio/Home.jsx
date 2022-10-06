@@ -5,10 +5,6 @@ import './Home.css'
 const Home = () => {
     return (
 <>
-<<<<<<< HEAD
-
-=======
->>>>>>> 4a81066646589a5b8839eb2a62b4d206d684bf89
 
 
 <div id="carouselExampleIndicators" className="carousel slide sec1"  data-bs-ride="true">
