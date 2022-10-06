@@ -1,9 +1,11 @@
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, updateDoc, doc } from 'firebase/firestore';
 import React, {useState, useContext} from 'react';
 import { CartContext } from './Context/CartContext';
 import db from '../Firebase/Firebase';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
+import './Contacto/Form.css'
+
 
 
 
@@ -12,7 +14,7 @@ import { Link } from 'react-router-dom';
 
 const FinalizarCompra = () => {
 
-const {cart,getTotal, clear} = useContext(CartContext);     //lo que traigo del context
+const {cart,getTotal, clear } = useContext(CartContext);     //lo que traigo del context
 
 //CREO UN USESTATE PARA GUARDAR LA ORDEN Y MOSTRARSELA AL CLIENTE
 const [numeroOrden, setnumeroOrden] = useState();
@@ -41,7 +43,7 @@ try {
 }
 
 
-//CREO UNA FUNCION QUE RECIBE COMO PARAMETRO UN EVENTO DONDE VOY GUARDANDO EN MI VARIABLE LOS DATOSINGRESADOS POR EL USUARIO
+//CREO UNA FUNCION QUE RECIBE COMO PARAMETRO UN EVENTO DONDE VOY GUARDANDO EN MI VARIABLE LOS DATOS INGRESADOS POR EL USUARIO
 const cambiosForm = (e) =>{                     
     setcomprador(({
         ...comprador,
@@ -65,27 +67,51 @@ const mensaje =(orden) =>{
     Swal.fire({
         title: 'Gracias por su compra!!!!',
         text: `Su numero de orden de compra es: ${orden}`,
-        confirmButtonText: 'Aceptar',
+        
+        confirmButtonText: 'Aceptar ' ,
         
 })
 }
 
+const actualizaStock =()=>{
+    try {
+        
+        cart.forEach(item=>{
+        const docRef = doc (db, "productos", item.id) 
+        console.log(item.stock)
+        console.log(item.cantidad)
+        const nuevoStock = item.stock - item.cantidad    
+        updateDoc (docRef, {stock:nuevoStock}) 
+        
+    }
+    
+    )
+                                            
+       } catch (error) {
+           console.log(error)
+       }
+}
 
     return (
         <>
         {!numeroOrden? <div>
-        <form onSubmit={formulario} >
-            <h1>Completar Datos</h1>
-            <input type="text" name="nombre" placeholder='Nombre' value={nombre} onChange={cambiosForm} />  <br></br>      {/*en value va lo que guarde como atributo de la variable comprador*/}
-            <input type="text" name="email" placeholder='email' value={email} onChange={cambiosForm} />    <br></br>
-            <input type="number" name="telefono" placeholder='Telefono' value={telefono} onChange={cambiosForm} />    <br></br>
+        <form className="estilosForm" onSubmit={formulario} >
+            <h2 data-aos="fade-right" data-aos-duration="1500">Completar Datos Para Finalizar la compra</h2>
+            <input className="form-control"  type="text" name="nombre" placeholder='Nombre' value={nombre} onChange={cambiosForm} data-aos="fade-left" data-aos-duration="1500" />  <br></br>      {/*en value va lo que guarde como atributo de la variable comprador*/}
+            <input className="form-control"  type="text" name="email" placeholder='email' value={email} onChange={cambiosForm} data-aos="fade-right" data-aos-duration="1500" />    <br></br>
+            <input className="form-control"  type="number" name="telefono" placeholder='Telefono' value={telefono} onChange={cambiosForm} data-aos="fade-left" data-aos-duration="1500"/>    <br></br>
             
-            <input type="submit" name="comprar" className='btn btn-success' />    
+            <input type="submit" name="comprar" className='btn btn-success btnBot' />    
         </form> </div> :
-              
-           mensaje(numeroOrden)
-}
-   
+              <div>
+              {mensaje(numeroOrden)}
+              <Link to='/' className="btn btn-success estiloBoton btnBot1">Inicio</Link>
+              </div>    
+        
+        }
+        {
+        actualizaStock()
+        }  
         </>
     );
 }

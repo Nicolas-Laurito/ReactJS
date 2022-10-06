@@ -1,7 +1,11 @@
 .estiloIcono a{
-    font-size: 50px;
+font-size: 45px;
 color: rgba(0, 0, 0, 0.671) ;
 text-decoration: none;
+}
+
+.estiloIcono a:hover{
+    color: black;
 }
 
 .estiloArt{

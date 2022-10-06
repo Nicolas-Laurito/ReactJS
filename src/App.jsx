@@ -6,10 +6,11 @@ import ItemDetailContainer from './componentes/ItemDetailContainer';
 import Cart from './componentes/Cart';
 import { faHourglass1 } from '@fortawesome/free-solid-svg-icons';
 import {CartProvider} from './componentes/Context/CartContext';
-import Form from './componentes/Form';
+import Form from './componentes/Contacto/Form';
 import FinalizarCompra from './componentes/FinalizarCompra';
-
-
+import Home from './componentes/PaginaInicio/Home';
+import QuienesSomos from './componentes/QuienesSomos/QuienesSomos';
+import Footer from './componentes/Footer/Footer';
 
 
 const App = () => {
@@ -20,16 +21,17 @@ const App = () => {
         
                 <Header/>                  
             <Routes>
-                <Route path= '/' element={<h1>Bienvenidos</h1>}></Route>                      
+                <Route path= '/' element={<Home/>}></Route>                      
                 <Route path= '/categoria/:categoria' element={<ItemListContainer/>}></Route>                      
                 <Route path= '/detalles/:id' element={<ItemDetailContainer/>}></Route>    
                 <Route path= '/cart' element={<Cart/>}></Route> 
                 <Route path= '/form' element={<Form/>}></Route> 
                 <Route path= '/FinalizarCompra' element={<FinalizarCompra/>}></Route> 
+                <Route path= '/QuienesSomos' element={<QuienesSomos/>}></Route> 
                 
                 
             </Routes>
-            
+                <Footer/>
         </BrowserRouter>
         </CartProvider>
         </>

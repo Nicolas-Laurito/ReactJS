@@ -49,6 +49,8 @@ const cantTotal = () =>{
 }
 
 
+
+
 return (
         <>
             <CartContext.Provider value={{cart, addCart, isInCart, removeItem, clear, getTotal, cantTotal}}>         {/*devuelvo el contexto que cree*/}   

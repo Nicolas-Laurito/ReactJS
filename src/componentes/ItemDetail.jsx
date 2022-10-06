@@ -2,7 +2,8 @@ import {React,useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 import { CartContext } from './Context/CartContext';
-
+import { faHourglass1 } from '@fortawesome/free-solid-svg-icons';
+import './ItemDetail.css'
 
 
 
@@ -13,32 +14,39 @@ const ItemDetail = ({unProducto}) => {
     
 
     function onAdd (cont) {
-        let nuevoStock=unProducto.stock - cont
-        unProducto.stock=nuevoStock
+       
         setCarrito(true)
         addCart(unProducto, cont)
-      
+    
            
     }       
 
     return (
-        <div  key={unProducto.id}>
-            <div className="card" style={{width: '15rem'}}>
-            <img src={unProducto.img} className="estiloCard card-img-top"  alt='Imagen' />
-            <div className="card-body">
-            <h5 className="card-title">{unProducto.nombre}</h5>
-            <p className="card-text">Descripcion: {unProducto.descripcion}</p>
-            <p className="card-text">Precio: ${unProducto.precio}</p>
+        <div className="container">
+            <div className="row " key={unProducto.id}>
+        
+            <div className='card nuevoCard'>
+                <div className='nuevoIMG'>
+            <img src={unProducto.img} className="estiloCard card-img"  alt='Imagen' />
             </div>
-            <div>
+            <div className=" nuevoCard1">
+            <h2 className="card-title">{unProducto.nombre}</h2>
+            <p className="card-text">{unProducto.descripcion}</p>
+            
+            </div>
+            <div className='nuevoCard2'>
+            <p className="card-text">Precio: ${unProducto.precio}</p>
                 {carrito ? <Link className="btn btn-success" to='/'>Seguir Comprando</Link> :
             <ItemCount stock={unProducto.stock} initial={1} onAdd={onAdd} />
             
         }</div>
-
+</div>
             </div>
             
+        
         </div>
+        
+
     );
 }
 

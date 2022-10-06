@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css'
 import NavBar from './NavBar' 
-import Formulario from './Formulario'
+
 import CartWidget from './CartWidget'
 
 
@@ -24,7 +24,7 @@ const Header = () => {
             </div>
             
             <div className='displayCarrito col-md-4'>
-            <Formulario contBuscar="Productos"/>
+            
             <CartWidget/>
             </div>
             </div>
