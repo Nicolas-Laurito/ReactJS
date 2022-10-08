@@ -67,7 +67,6 @@ const mensaje =(orden) =>{
     Swal.fire({
         title: 'Gracias por su compra!!!!',
         text: `Su numero de orden de compra es: ${orden}`,
-        
         confirmButtonText: 'Aceptar ' ,
         
 })
@@ -78,8 +77,6 @@ const actualizaStock =()=>{
         
         cart.forEach(item=>{
         const docRef = doc (db, "productos", item.id) 
-        console.log(item.stock)
-        console.log(item.cantidad)
         const nuevoStock = item.stock - item.cantidad    
         updateDoc (docRef, {stock:nuevoStock}) 
         

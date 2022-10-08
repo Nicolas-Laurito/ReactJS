@@ -2,7 +2,6 @@ import {React,useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 import { CartContext } from './Context/CartContext';
-import { faHourglass1 } from '@fortawesome/free-solid-svg-icons';
 import './ItemDetail.css'
 
 

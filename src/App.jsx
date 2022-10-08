@@ -4,7 +4,6 @@ import Header from './componentes/header/Header';
 import ItemListContainer from './componentes/ItemListContainer';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
 import Cart from './componentes/Cart';
-import { faHourglass1 } from '@fortawesome/free-solid-svg-icons';
 import {CartProvider} from './componentes/Context/CartContext';
 import Form from './componentes/Contacto/Form';
 import FinalizarCompra from './componentes/FinalizarCompra';

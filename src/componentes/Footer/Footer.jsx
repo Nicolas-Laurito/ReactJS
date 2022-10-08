@@ -3,6 +3,8 @@ import './Footer.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import {faWhatsapp, faInstagram} from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -41,15 +43,15 @@ const Footer = () => {
       </div>
       <div className="col-sm-12 col-lg-4 ">
         <div className="enlacesRedes">
-          <a href="https://api.whatsapp.com/send?phone=541122542983" target="blanck">
+          <Link to="https://api.whatsapp.com/send?phone=541122542983" target="blanck">
           <FontAwesomeIcon icon={faWhatsapp}/>
-          </a>
-          <a href="https://www.instagram.com/bulsaragrowshop/" target="blanck">
+          </Link>
+          <Link to="https://www.instagram.com/bulsaragrowshop/" target="blanck">
           <FontAwesomeIcon icon={faInstagram} />
-          </a>
-          <a href="mailto:bulsara_cactus@gmail.com?subject=Consulta" target="blanck">
+          </Link>
+          <Link to="mailto:bulsara_cactus@gmail.com?subject=Consulta" target="blanck">
             <FontAwesomeIcon icon={faEnvelope} />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

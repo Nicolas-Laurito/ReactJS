@@ -1,7 +1,6 @@
 import {React, useState, useEffect} from 'react';
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
-import { isFocusable } from '@testing-library/user-event/dist/utils';
 import db from '../Firebase/Firebase';
 import {collection, getDocs, query, where} from 'firebase/firestore';
 
