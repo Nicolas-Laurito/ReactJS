@@ -12,9 +12,9 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div>
-            <footer className="estilosFooter">
-  <div className="container-fluid">
+        
+         
+  <div className="container-fluid estilosFooter">
     <div className="row">
       <div className="col-sm-12 col-lg-4 ">
         <div className="centrarIframe">
@@ -56,9 +56,9 @@ const Footer = () => {
       </div>
     </div>
   </div>
-</footer>
 
-        </div>
+
+       
     );
 }
 

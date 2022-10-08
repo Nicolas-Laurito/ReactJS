@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 function NavBar() {        
   return(
    
-    <div className="menu">
-    <nav className="navegacion navbar-expand-sm navbar-light">
+    
+    <nav className="navegacion navbar-expand-sm navbar-light menu">
       <ul className="menu navbar-nav ">
         <Link className="nav-link" to='/'><li className="nav-item">Inicio</li></Link>
         <Link to='/QuienesSomos' className="nav-link"><li className="nav-item">Quienes Somos?</li></Link>
@@ -23,7 +23,7 @@ function NavBar() {
         <Link to='/form' className="nav-link"><li className="nav-item">Contacto</li></Link>
       </ul>
    </nav>
-  </div>   
+   
    
     );
 }

@@ -3,7 +3,7 @@ import './Form.css'
 
 const Form = () => {
     return (
-        <div>
+        
             <form className="estilosForm" action="" name="miFormulario" method="post"  netlify >
             <div className="form-group ">
               <label for="exampleFormControlInput1"></label>
@@ -37,7 +37,7 @@ const Form = () => {
             </div>
             <input className="btn btn-success estiloBoton btnBot" type="submit" value="Enviar"></input>
         </form>
-        </div>
+        
     );
 }
 
