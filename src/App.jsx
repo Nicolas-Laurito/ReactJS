@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import Header from './componentes/header/Header';
-import ItemListContainer from './componentes/ItemListContainer';
-import ItemDetailContainer from './componentes/ItemDetailContainer';
-import Cart from './componentes/Cart';
+import ItemListContainer from './componentes/ecommerce/ItemListContainer';
+import ItemDetailContainer from './componentes/ecommerce/ItemDetailContainer';
+import Cart from './componentes/ecommerce/Cart';
 import {CartProvider} from './componentes/Context/CartContext';
 import Form from './componentes/Contacto/Form';
-import FinalizarCompra from './componentes/FinalizarCompra';
+import FinalizarCompra from './componentes/ecommerce/FinalizarCompra';
 import Home from './componentes/PaginaInicio/Home';
 import QuienesSomos from './componentes/QuienesSomos/QuienesSomos';
 import Footer from './componentes/Footer/Footer';

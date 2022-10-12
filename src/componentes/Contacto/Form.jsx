@@ -1,4 +1,4 @@
-import { clear } from '@testing-library/user-event/dist/clear';
+
 import { addDoc, collection } from 'firebase/firestore';
 import React, {useState} from 'react';
 import './Form.css'

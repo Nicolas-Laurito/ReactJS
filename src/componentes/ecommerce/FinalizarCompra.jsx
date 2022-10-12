@@ -1,15 +1,10 @@
 import { collection, addDoc, updateDoc, doc } from 'firebase/firestore';
 import React, {useState, useContext} from 'react';
-import { CartContext } from './Context/CartContext';
-import db from '../Firebase/Firebase';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
-import './Contacto/Form.css'
-
-
-
-
-
+import '../Contacto/Form.css'
+import { CartContext } from '../Context/CartContext';
+import db from '../../Firebase/Firebase';
 
 
 const FinalizarCompra = () => {
@@ -94,9 +89,9 @@ const actualizaStock =()=>{
         {!numeroOrden? <div>
         <form className="estilosForm" onSubmit={formulario} >
             <h2 data-aos="fade-right" data-aos-duration="1500">Completar Datos Para Finalizar la compra</h2>
-            <input className="form-control"  type="text" name="nombre" placeholder='Nombre' value={nombre} onChange={cambiosForm} data-aos="fade-left" data-aos-duration="1500" />  <br></br>      {/*en value va lo que guarde como atributo de la variable comprador*/}
-            <input className="form-control"  type="text" name="email" placeholder='email' value={email} onChange={cambiosForm} data-aos="fade-right" data-aos-duration="1500" />    <br></br>
-            <input className="form-control"  type="number" name="telefono" placeholder='Telefono' value={telefono} onChange={cambiosForm} data-aos="fade-left" data-aos-duration="1500"/>    <br></br>
+            <input className="form-control"  type="text" name="nombre" placeholder='Nombre' value={nombre} onChange={cambiosForm} data-aos="fade-left" data-aos-duration="1500" required />  <br></br>      {/*en value va lo que guarde como atributo de la variable comprador*/}
+            <input className="form-control"  type="email" name="email" placeholder='email' value={email} onChange={cambiosForm} data-aos="fade-right" data-aos-duration="1500" required />    <br></br>
+            <input className="form-control"  type="number" name="telefono" placeholder='Telefono' value={telefono} onChange={cambiosForm} data-aos="fade-left" data-aos-duration="1500" required/>    <br></br>
             
             <input type="submit" name="comprar" className='btn btn-success btnBot' />    
         </form> </div> :
